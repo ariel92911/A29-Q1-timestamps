@@ -4,10 +4,10 @@ const port = 3000
 
 app.use((req, res, next) => {
   if (req.url !== '/favicon.ico') {
-    let today = new Date().toLocaleString()
+    let reqTime = new Date().toLocaleString()
     let method = req.method
     let url = req.url
-    console.log(`${today} | ${method} from ${url}`)
+    console.log(`${reqTime} | ${method} from ${url}`)
   }
   next()
 })
